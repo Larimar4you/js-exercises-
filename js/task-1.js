@@ -7,7 +7,11 @@
 всередині елемента з id "place" і коли клік припадає поза зоною елемента
 https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
 */
-console.log();
-const  = () => {
-  
-};
+document.addEventListener("click", function (event) {
+  const place = document.getElementById("place");
+  if (place.contains(event.target)) {
+    console.log("Клік всередині елемента #place");
+  } else {
+    console.log("Клік поза елементом #place");
+  }
+});
